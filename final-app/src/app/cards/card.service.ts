@@ -7,11 +7,18 @@ import { ICard } from '../models/card';
 })
 export class CardService {
 cardUrl: string = "https://restcountries.com/v3.1/all";
-
-  constructor(private http: HttpClient) { }
+nameSearchUrl : string = "https://restcountries.com/v3.1/name"
+continentUrl : string = "https://restcountries.com/v3.1/region"
+constructor(private http: HttpClient) { }
 
   getAll(): Observable<ICard[]> {
     return this.http.get<ICard[]>(this.cardUrl);
+  }
+  getByName(name: string): Observable<ICard>{
+    return this.http.get<ICard>(`${this.nameSearchUrl}/${name}`)
+  }
+  getByRegion(continent: string): Observable<ICard[]>{
+    return this.http.get<ICard[]>(`${this.continentUrl}/${continent}`)
   }
 
 }

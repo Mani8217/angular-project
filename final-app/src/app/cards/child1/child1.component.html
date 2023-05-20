@@ -1,0 +1,18 @@
+<div class="container">
+  <div>
+  <div class="form">
+    <input type="text"  [(ngModel)]="name" placeholder="Enter the country name..">
+    <button (click)="getByName(name)">Find Country</button>
+  </div>
+  <div>
+    <img src="{{countryImgSrc}}" alt="name">
+    <h3>{{name}}</h3>
+  </div>
+  </div>
+  <div>
+    <p><span class="spans">Geographical Latitude:</span> {{latitude}}</p>
+    <p><span class="spans">Geographical Langitude: </span> {{langitude}}</p>
+    <p><span class="spans">Capital:</span> {{capital}}</p>
+    <p><span class="spans">Continent:</span> {{continent}}</p>
+  </div>
+  </div>

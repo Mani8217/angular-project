@@ -3,22 +3,33 @@ import { CommonModule } from '@angular/common';
 import { CardGalleryComponent } from './card-gallery/card-gallery.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardFormComponent } from './card-form/card-form.component';
-
+import { FormsModule } from '@angular/forms';
+import { Child1Component } from './child1/child1.component';
+import { Child2Component } from './child2/child2.component';
 
 
 @NgModule({
   declarations: [
     CardGalleryComponent,
     CardDetailComponent,
-    CardFormComponent
+    CardFormComponent,
+    Child1Component,
+    Child2Component,
+    
+
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
+
   ],
   exports:[
     CardDetailComponent,
     CardFormComponent,
     CardGalleryComponent
+
+
+
   ]
 
 })

@@ -1,0 +1,55 @@
+
+<select  (change)="getByContinent(selectOption)" [(ngModel)]="selectOption">
+  <option value="">-- select --</option>
+  <option value="asia">Asia</option>
+  <option value="europe">Europe</option>
+  <option value="oceania">Oceania</option>
+  <option value="africa">Africa</option>
+  <option value="america">America</option>
+</select>
+
+
+
+<div class="container">
+    <ng-container *ngIf="selectedValue === 'asia'">
+      <div *ngFor="let banner of bannerList, index as i" class="card">
+        <img src="{{banner}}" alt="{{nameList[i]}}">
+        <h3>{{nameList[i]}}</h3>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="selectedValue === 'europe'">
+      <div *ngFor="let banner of bannerList, index as i" class="card">
+        <img src="{{banner}}" alt="{{nameList[i]}}">
+        <h3>{{nameList[i]}}</h3>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="selectedValue === 'oceania'">
+      <div *ngFor="let banner of bannerList, index as i" class="card">
+        <img src="{{banner}}" alt="{{nameList[i]}}">
+        <h3>{{nameList[i]}}</h3>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="selectedValue === 'africa'">
+      <div *ngFor="let banner of bannerList, index as i" class="card">
+        <img src="{{banner}}" alt="{{nameList[i]}}">
+        <h3>{{nameList[i]}}</h3>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="selectedValue === 'america'">
+      <div *ngFor="let banner of bannerList, index as i" class="card">
+        <img src="{{banner}}" alt="{{nameList[i]}}">
+        <h3>{{nameList[i]}}</h3>
+      </div>
+    </ng-container>
+
+</div>
+
+
+
+
+
+
+

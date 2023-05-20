@@ -8,17 +8,22 @@ import { ICard } from 'src/app/models/card';
   styleUrls: ['./card-gallery.component.css']
 })
 export class CardGalleryComponent implements OnInit{
- cards: ICard[] = []
+  parentData: string = 'Hello from parent';
+
+  cards: ICard[] = []
  names: string[] = []
  flags: string[] = []
  subRegion: string[] = []
+
+
 constructor(private cardService: CardService){}
 
   ngOnInit(): void {
+
     this.cardService.getAll().subscribe(cards => {
       console.log(cards);
-      this.cards = cards;
-      cards.forEach((card: any)=> {
+      this.cards = cards.slice(0, 12);
+      this.cards.forEach((card: any)=> {
         this.names.push(card['name'].common);
 
         console.log(this.names);
@@ -29,7 +34,8 @@ constructor(private cardService: CardService){}
 
 
 
-        })
+        });
+
 }
 
 

@@ -1,4 +1,8 @@
+
+
+
 <div class="container">
+
 
 
   <div *ngFor="let flag of flags, index as i" class="card">
@@ -10,9 +14,10 @@
 
 
  </div>
+ <app-child1 [childData]="parentData"></app-child1>
 
 
-
+<app-child2 [childData]="parentData"></app-child2>
 
 
 

@@ -1,1 +1,10 @@
-<p>card-detail works!</p>
+<div class="container">
+<div class="form">
+  <input type="text"  [(ngModel)]="name" placeholder="Enter the country name..">
+  <button (click)="getByName(name)">Find Country</button>
+</div>
+<div>
+  <img src="{{countryImgSrc}}" alt="name">
+  <h3>{{name}}</h3>
+</div>
+</div>
