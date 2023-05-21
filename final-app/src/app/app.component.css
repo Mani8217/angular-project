@@ -6,19 +6,18 @@ body{
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(246, 246, 204);
 }
 .panel {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image:'https://img.freepik.com/free-vector/white-gold-geometric-pattern-background-vector_53876-140726.jpg?w=2000' ;
+
   padding: 40px;
   border-bottom: 2px solid rgb(6, 118, 155);
 }
 
 .panel a {
-  color: rgb(5, 112, 148);
+  color: green;
   text-decoration: none;
   font-size: 26px;
   padding: 5px;

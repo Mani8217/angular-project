@@ -6,8 +6,8 @@ import { CardFormComponent } from './card-form/card-form.component';
 import { FormsModule } from '@angular/forms';
 import { Child1Component } from './child1/child1.component';
 import { Child2Component } from './child2/child2.component';
-
-
+import {MatButtonModule} from '@angular/material/button'
+import {MatFormFieldModule} from '@angular/material/form-field'
 @NgModule({
   declarations: [
     CardGalleryComponent,
@@ -15,12 +15,15 @@ import { Child2Component } from './child2/child2.component';
     CardFormComponent,
     Child1Component,
     Child2Component,
-    
+
+
 
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule
 
   ],
   exports:[

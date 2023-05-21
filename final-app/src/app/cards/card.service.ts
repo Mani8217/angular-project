@@ -20,5 +20,8 @@ constructor(private http: HttpClient) { }
   getByRegion(continent: string): Observable<ICard[]>{
     return this.http.get<ICard[]>(`${this.continentUrl}/${continent}`)
   }
+  create(event: ICard) : Observable<ICard>{
+    return this.http.post<ICard>(this.cardUrl, event);
+  }
 
 }
