@@ -9,24 +9,25 @@ body{
 }
 .panel {
   display: flex;
+  background-color: #f1f1f1;
   justify-content: space-around;
   align-items: center;
   padding: 40px;
-  border-bottom: 2px solid rgb(6, 118, 155);
+  border: 4px double #198753;
 }
 
 .panel a {
-  color: green;
+  color: #198753;
   text-decoration: none;
   font-size: 26px;
   padding: 5px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #f1f1f1;
 }
 .panel a:hover {
   border-bottom: 2px solid lightgray;
 
 }
 .panel a:active{
-  border-bottom: 2px solid black
+  border-bottom: 2px solid black;
 }
 

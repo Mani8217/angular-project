@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { CardService } from '../card.service';
 import { ICard } from 'src/app/models/card';
 import * as L from 'leaflet'
@@ -7,7 +7,8 @@ import * as L from 'leaflet'
   templateUrl: './card-detail.component.html',
   styleUrls: ['./card-detail.component.css']
 })
-export class CardDetailComponent {
+export class CardDetailComponent{
+  private map:any;
 
   countryImgSrc: string = "";
   countryTitle: string = "";
@@ -23,6 +24,8 @@ export class CardDetailComponent {
 
 
   getByName(name: string): void{
+    const canvas = <HTMLCanvasElement>document.getElementById('mapCanvas');
+    const ctx = canvas.getContext('2d');
     this.cardService.getByName(this.name).subscribe((data: any) => {
      console.log(data);
      this.firstCountry = data[0];
@@ -30,14 +33,10 @@ export class CardDetailComponent {
      this.countryImgSrc = this.firstCountry.flags.png;
      this.googleMap = this.firstCountry.maps.googleMaps;
 
-     const mapCanvas = document.getElementById('mapCanvas') as HTMLCanvasElement;
-     const context = mapCanvas.getContext('2d');
-     this.lngtude = this.firstCountry.latlng[0];
-     this.latitude = this.firstCountry.latlng[1];
-     mapCanvas.width = this.latitude
-     mapCanvas.height = this.lngtude;
-     context!.fillStyle= 'blue'
-        context!.fillRect(0, 0, mapCanvas.width, mapCanvas.height);
+     ctx!.fillStyle = 'red'
+      ctx!.fillRect(10, 10, 100, 100);
+
+
 })
 
 }
