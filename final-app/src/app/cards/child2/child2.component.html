@@ -1,5 +1,5 @@
 
-
+<div class="container">
 <select class="form-select" size="3" aria-label="size 3 select example" (change)="getByContinent(selectOption)" [(ngModel)]="selectOption">
   <option selected>Open this select menu</option>
   <option value="asia">Asia</option>
@@ -11,7 +11,7 @@
 
 
 
-<div class="container">
+
     <ng-container *ngIf="selectedValue === 'asia'">
       <div *ngFor="let banner of bannerList, index as i" class="card">
         <img src="{{banner}}" alt="{{nameList[i]}}">

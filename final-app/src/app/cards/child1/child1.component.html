@@ -1,8 +1,9 @@
 <div class="container">
   <div>
   <div class="form">
-    <input type="text"  [(ngModel)]="name" placeholder="Enter the country name..">
-    <button (click)="getByName(name)">Find Country</button>
+    <input class="form-control" type="text"  [(ngModel)]="name" placeholder="Enter the country name..">
+    <br>
+   <button (click)="getByName(name)" class="btn btn-success">Find Country</button>
   </div>
   <div>
     <img src="{{countryImgSrc}}" alt="name">

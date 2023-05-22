@@ -18,6 +18,7 @@ export class Child2Component {
 
   constructor(private cardService: CardService){}
  getByContinent(selectOption: string): void {
+  this.bannerList= []
   this.selectedValue = selectOption
     this.cardService.getByRegion(selectOption).subscribe(data => {
       console.log(data)

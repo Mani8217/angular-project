@@ -7,6 +7,15 @@
   height: 500px;
 
 }
+.form-container {
+text-align: center;
+
+}
+.form-container input{
+ height:35px;
+ margin-bottom:10px
+}
+
 img {
   width: 200px;
   height: 100px;

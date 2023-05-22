@@ -1,20 +1,20 @@
-<mat-form-field>
-  <mat-label>Country Name</mat-label>
-  <input matInput [(ngModel)]="cardName" required placeholder="Enter Country Name">
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Country Flag</mat-label>
-  <input matInput [(ngModel)]="cardFlag" required placeholder="Enter Flag Url..">
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Continent</mat-label>
-  <input matInput [(ngModel)]="cardContinent" placeholder="Enter Continent..">
-</mat-form-field>
-<button mat-raised-button color="primary" (click)="createCard()">Primary</button>
-<div *ngIf="createCard" class="container">
-  <div *ngFor="let card of cardList, index as i">
-<img src="{{card.flag}}" alt="">
-<p>{{card.name}}</p>
-<p>{{card.subregion}}</p>
-  </div>
+<div class="form-container">
+
+  <input  [(ngModel)]="cardName" required placeholder="Enter Country Name"><br>
+  <input  [(ngModel)]="cardFlag" required placeholder="Enter Flag Url.."><br>
+  <input  [(ngModel)]="cardContinent" required placeholder="Enter Continent.."><br>
+
+ <button mat-raised-button color="primary" (click)="createCard()">Primary</button>
 </div>
+<div class="container">
+
+<div *ngIf="createCard"  >
+      <div *ngFor="let card of cardList, index as i"  class="card">
+    <img src="{{card.flag}}" alt="">
+    <h3>{{card.name}}</h3>
+    <h3>{{card.subregion}}</h3>
+    <button id="remove-btn" (click)="removeCard(card.id)">X</button>
+      </div>
+    </div>
+</div>
+
